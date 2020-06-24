@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.logging.Logger;
 
-@Tag(name = "Star Wars", description = "SWHeroesAPIController Gwiezdnych Wojen")
+@Tag(name = "Star Wars", description = "Star Wars SWHeroesAPIController")
 @OpenAPIDefinition(
         info = @Info(
                 title = "Star Wars API",
-                description = "SWHeroesAPIController Gwiezdnych Wojen (oraz ich sprzęcior) "
+                description = "Star Wars SWHeroesAPIController  "
         ))
 @RestController
 @RequestMapping("/characters")
