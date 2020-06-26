@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020 Piotr Zerynger
+ */
+
 package pl.itger.starWarsHeroes.api.controllers;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
@@ -31,4 +35,8 @@ public class SWHeroesAPIController implements SWHeroesAPI {
         return delegate;
     }
 
+//    @RequestMapping("/")
+//    public String home() {
+//        return "Hello World!";
+//    }
 }

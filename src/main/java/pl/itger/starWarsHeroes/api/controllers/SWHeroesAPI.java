@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020 Piotr Zerynger
+ */
+
 package pl.itger.starWarsHeroes.api.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -8,6 +12,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import pl.itger.starWarsHeroes.api.daos.Hero;
 import pl.itger.starWarsHeroes.api.daos.Page;
@@ -38,5 +43,10 @@ public interface SWHeroesAPI {
             , @ApiResponse(responseCode = "204", description = "Brak danych / no content")
     }) default ResponseEntity<Page> getCharactersPage(@RequestParam(value = "page", defaultValue = "1") int page) {
         return getDelegate().getCharactersPage(page);
+    }
+
+    @RequestMapping("/")
+    default String home() {
+        return "Hello World!";
     }
 }

@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020 Piotr Zerynger
+ */
+
 package pl.itger.starWarsHeroes.api.repo;
 
 import org.springframework.data.domain.Page;

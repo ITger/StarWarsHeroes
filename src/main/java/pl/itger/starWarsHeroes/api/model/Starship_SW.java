@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020 Piotr Zerynger
+ */
+
 package pl.itger.starWarsHeroes.api.model;
 
 import lombok.*;
