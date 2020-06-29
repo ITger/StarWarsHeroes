@@ -5,9 +5,9 @@
 package pl.itger.starWarsHeroes.api.controllers;
 
 import io.swagger.v3.oas.annotations.Parameter;
+import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -33,18 +33,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @Service
+@RequiredArgsConstructor
 public class SWHeroesAPIDelegateImpl implements SWHeroesAPIDelegate {
     private static final Logger LOG = Logger.getLogger(SWHeroesAPIDelegateImpl.class.getName());
 
-    //TODO: uzyc org.springframework.web.reactive.client.WebClient do rownolegego pobrania planety i starship dla danej persony.
-    @Autowired
-    private RestTemplate restTemplate;
-
-    @Autowired
-    private BohaterRepo repository;
-
-    @Autowired
-    private ModelMapper modelMapper;
+    final private RestTemplate restTemplate;
+    final private BohaterRepo repository;
+    final private ModelMapper modelMapper;
 
     final static String HTTP = "http";
     final static String HTTPS = "https";
@@ -52,8 +47,7 @@ public class SWHeroesAPIDelegateImpl implements SWHeroesAPIDelegate {
     public ResponseEntity<Hero> getCharactersById(
             @Parameter(required = true, description = "id of character to be searched") @PathVariable int id) {
         LOG.info("getCharactersById " + id);
-        RestTemplate restTemplate = new RestTemplate();
-        Person_SW person_sw; //TODO: make optional
+        Person_SW person_sw;
         Hero hero;
         try {
             person_sw = restTemplate.getForObject("https://swapi.dev/api/people/" + id + "/", Person_SW.class);
@@ -86,7 +80,6 @@ public class SWHeroesAPIDelegateImpl implements SWHeroesAPIDelegate {
 
     public ResponseEntity<Page> getCharactersPage(@RequestParam(value = "page", defaultValue = "1") int page) {
         LOG.info("getCharactersPage " + page);
-        RestTemplate restTemplate = new RestTemplate();
         Page_SW page_sw;
         final Page pageDTO = new Page();
         try {

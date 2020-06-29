@@ -21,7 +21,6 @@ import static java.util.stream.Collectors.toList;
 public class BohaterRepo {
     private Map<Long, Hero> longBohaterHashMap = new HashMap<>();
 
-
     public Page<Hero> getBohaterowie(Pageable pageable) {
         int toSkip = pageable.getPageSize() * pageable.getPageNumber();
         List<Hero> result = longBohaterHashMap.values().stream().skip(toSkip).limit(pageable.getPageSize()).collect(toList());

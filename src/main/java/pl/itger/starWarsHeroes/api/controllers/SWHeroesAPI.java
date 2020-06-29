@@ -47,6 +47,6 @@ public interface SWHeroesAPI {
 
     @RequestMapping("/")
     default String home() {
-        return "Hello World!";
+        return "Hello Star Wars!";
     }
 }
