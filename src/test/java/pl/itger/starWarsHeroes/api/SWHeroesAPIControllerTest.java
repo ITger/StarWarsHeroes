@@ -3,9 +3,7 @@ package pl.itger.starWarsHeroes.api;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
 import org.springframework.boot.test.web.client.TestRestTemplate;
-
 import org.springframework.test.context.web.WebAppConfiguration;
 import pl.itger.starWarsHeroes.SWHeroes;
 import pl.itger.starWarsHeroes.api.controllers.SWHeroesAPIController;

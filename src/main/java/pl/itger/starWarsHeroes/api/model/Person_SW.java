@@ -6,6 +6,7 @@ package pl.itger.starWarsHeroes.api.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
+
 import java.util.List;
 
 /**
@@ -36,10 +37,10 @@ public class Person_SW {
     String birth_year;
     String gender;
     String homeworld;
-    List<String> films ;
-    List<String> species ;
-    List<String> vehicles ;
-    List<String> starships ;
+    List<String> films;
+    List<String> species;
+    List<String> vehicles;
+    List<String> starships;
     String created;
     String edited;
     String url;

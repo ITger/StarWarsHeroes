@@ -15,13 +15,13 @@ public interface SWHeroesAPIDelegate {
      * @see SWHeroesAPI#getCharactersById(int)
      */
     default ResponseEntity<Hero> getCharactersById(int id) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        return new ResponseEntity<>( HttpStatus.NOT_IMPLEMENTED );
     }
 
     /**
      * @see SWHeroesAPI#getCharactersPage(int)
      */
     default ResponseEntity<Page> getCharactersPage(int page) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        return new ResponseEntity<>( HttpStatus.NOT_IMPLEMENTED );
     }
 }

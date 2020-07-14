@@ -13,13 +13,13 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
 
 /**
-
+ *
  */
 @SpringBootApplication
-@ComponentScan(basePackages = {"pl.itger.starWarsHeroes.api.controllers",
-        "pl.itger.starWarsHeroes.api.repo",
-        "pl.itger.starWarsHeroes.api.daos",
-        "pl.itger.starWarsHeroes.api.model", "pl.itger.starWarsHeroes.api.exceptions"})
+//@ComponentScan(basePackages = {"pl.itger.starWarsHeroes.api.controllers",
+//        "pl.itger.starWarsHeroes.api.repo",
+//        "pl.itger.starWarsHeroes.api.daos",
+//        "pl.itger.starWarsHeroes.api.model", "pl.itger.starWarsHeroes.api.exceptions"})
 public class SWHeroes {
     public static void main(String[] args) {
         SpringApplication.run(SWHeroes.class, args);

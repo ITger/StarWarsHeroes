@@ -14,6 +14,7 @@ import java.util.List;
  */
 @Data
 public class Hero {
+    List<Starship> starships = new ArrayList<>();
     private String id;
     private String name;
     private String height;
@@ -24,6 +25,5 @@ public class Hero {
     private String birthYear;
     private String gender;
     private Homeworld homeworld;
-    List<Starship> starships = new ArrayList<>();
 }
 

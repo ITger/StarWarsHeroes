@@ -18,8 +18,9 @@ import static org.junit.Assert.*;
  */
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class HeroesControllerTest extends  AbstractTest  {
+public class HeroesControllerTest extends AbstractTest {
     private static final Logger LOG = Logger.getLogger(HeroesControllerTest.class.getName());
+
     @Override
     @BeforeAll protected void setUp() {
         super.setUp();
